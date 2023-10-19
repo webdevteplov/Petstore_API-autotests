@@ -32,7 +32,7 @@ public class TestCases {
         RestAssured.baseURI = url;
 
         JSONParser jsonParser = new JSONParser();
-        fileContent = (JSONObject) jsonParser.parse(new FileReader("petToUpload.json"));
+        fileContent = (JSONObject) jsonParser.parse(new FileReader("./src/test/resources/petToUpload.json"));
 
         id = given().contentType("application/json")
                 .accept("application/json")
